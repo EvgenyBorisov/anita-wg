@@ -5,7 +5,7 @@ services:
         env_file:
             - ./.env
         volumes:
-            - /var/www/anita.wg/wireguard:/etc/wireguard
+            - ./wireguard:/etc/wireguard
         ports:
             - "${WG_PUBLIC_PORT}:51820/udp"
             - "${WG_ADMIN_PUBLIC_PORT}:51821/tcp"
