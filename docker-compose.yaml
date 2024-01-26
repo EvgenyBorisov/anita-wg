@@ -7,8 +7,8 @@ services:
         volumes:
             - /var/www/anita.wg/wireguard:/etc/wireguard
         ports:
-            - 51820:51820/udp
-            - 51821:51821/tcp
+            - "51820:${WG_PUBLIC_PORT}/udp"
+            - "51821:${WG_ADMIN_PUBLIC_PORT}/tcp"
         cap_add:
             - NET_ADMIN
             - SYS_MODULE
