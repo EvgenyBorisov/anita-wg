@@ -17,7 +17,8 @@ services:
             - net.ipv4.ip_forward=1
         restart: unless-stopped
         image: ghcr.io/wg-easy/wg-easy
-
+        networks:
+            - anita_network
 networks:
   anita-network:
     external: true
