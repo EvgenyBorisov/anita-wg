@@ -20,5 +20,5 @@ services:
         networks:
             - anita-network
 networks:
-  anita-network:
-    external: true
+    anita-network:
+        external: true
