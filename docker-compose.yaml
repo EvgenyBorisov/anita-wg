@@ -1,7 +1,7 @@
 version: "3"
 services:
-    wg:
-        container_name: anita.wg
+    anita.wg:
+        container_name: anita-wg
         env_file:
             - ./.env
         volumes:
@@ -17,3 +17,7 @@ services:
             - net.ipv4.ip_forward=1
         restart: unless-stopped
         image: ghcr.io/wg-easy/wg-easy
+
+networks:
+  anita-network:
+    external: true
